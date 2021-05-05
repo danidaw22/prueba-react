@@ -1,12 +1,41 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import '../node_modules/bootstrap/dist/js/bootstrap.bundle';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Films from "./Films";
+import Features from "./Features";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Fragment>
+    <Router>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div className="navbar-nav">
+              <Link className="nav-link" to="/">Home</Link>
+              <Link className="nav-link" to="/features">Features</Link>
+            </div>
+          </div>
+        </nav>
+
+        <Switch>
+          <Route path="/Features">
+            <Features />
+          </Route>
+          <Route path="/">
+            <App />
+          </Route>
+        </Switch>
+      </Router>
+    </Fragment>
   </React.StrictMode>,
   document.getElementById('root')
 );
