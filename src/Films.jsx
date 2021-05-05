@@ -7,7 +7,7 @@ export default function Films({addNewFilm}) {
 
     const addFilm = ()=>{
         const newFilm = inputFilm.current.value;
-        if(inputFilm.current.value.trim()!=''){
+        if(inputFilm.current.value.trim()!==''){
           addNewFilm(newFilm);
         }
         

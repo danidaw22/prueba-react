@@ -10,7 +10,6 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Films from "./Films";
 import Features from "./Features";
 
 ReactDOM.render(

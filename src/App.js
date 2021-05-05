@@ -1,13 +1,7 @@
 import { Fragment, useState } from "react";
 import "./App.css";
 import Films from "./Films";
-//import Features from "./Features";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+
 
 
 
@@ -20,7 +14,7 @@ function App() {
 
     let newFilm = {}
 
-    if(peliculas.length==0){
+    if(peliculas.length===0){
       newFilm = {
         id:1,
         title:valor,
@@ -56,9 +50,9 @@ function App() {
     
     const newPelis = [...peliculas]
 
-    let film = newPelis.filter( item => item.id!=id)
+    let film = newPelis.filter( item => item.id!==id)
 
-    if(film.length == 0){
+    if(film.length === 0){
       film = [];
     }
 
